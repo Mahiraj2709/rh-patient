@@ -1,0 +1,66 @@
+<ion-side-menus enable-menu-with-back-views="false">
+    <ion-side-menu-content>
+        <ion-nav-bar class="esthead" align-title="center">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+                </button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menuContent"></ion-nav-view>
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left">
+
+        <ion-content>
+            <nav class="left-nav-main">
+                <section class="figure-container">
+                    <figure class="profile-pic"><img src="img/user.png" alt="" height="65" width="50"></figure>
+                    <figcaption class="user-detail"> John Smith</figcaption>
+                </section>
+
+                <section class="nav-menu">
+                    <ul>
+                        <li menu-close ui-sref="app.screen2" ng-click="comingSoon()"><img src="img/left-nav-invite-friends.png"
+                                                                                          alt=""> Invite Friends
+                        </li>
+                        <li menu-close ui-sref="app.clienti" ng-click="comingSoon()"><img src="img/left-nav-appointments.png"
+                                                                                          alt=""> Appointment
+                        </li>
+                        <li menu-close ui-sref="app.screen9" ng-click="comingSoon()"><img src="img/left-nav-payment.png"
+                                                                                          alt=""> Payment
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-home.png" alt=""> Addresses
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-account.png" alt=""> Account
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-promotion.png" alt=""> Promotion
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-support.png" alt=""> Support
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-gift.png" alt=""> Buy gift cards
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-history.png" alt=""> History
+                        </li>
+                        <li menu-close ui-sref="app.screen10" ng-click="comingSoon()"><img
+                                src="img/left-nav-reset.png" alt=""> Reset Password
+                        </li>
+                        <li menu-close ng-click="logout()"><img src="img/left-nav-logout.png" alt=""> Logout</li>
+                    </ul>
+                </section>
+            </nav>
+
+            </ul>
+            </div>
+
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

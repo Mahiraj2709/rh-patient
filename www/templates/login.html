@@ -1,0 +1,31 @@
+<ion-view title="ReviveHydration">
+
+    <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"
+                ng-hide="true">
+        </button>
+    </ion-nav-buttons>
+
+  <ion-content>
+
+
+<div class="main">
+        <div class="formarea">
+        <div class="login_sec">
+        <img src="img/logo.png" width="92" height="87" alt="">
+<h1>Login</h1></div>
+ <form ng-submit="">
+          <div class="input-field">
+            <input type="text"  placeholder="Email ID" ng-model="user.email">
+            <span class="txtbox_icons"><i class="fa fa-envelope" aria-hidden="true"></i></span> </div>
+          <div class="input-field">
+            <input type="password" placeholder="Password" ng-model="user.password">
+            <span class="txtbox_icons"> <i class="fa fa-unlock-alt" aria-hidden="true"></i></span></div>
+           <div class="btn_holder" ng-click="login()"> <input type="submit" name="submit" id="" class="btns" value="Login"> </div>
+          <div class="forgot_pass"> <a ui-sref="app.forgot_password">Forgot Password?</a>  <span class="no_account_right">Don’t have an account? <a ui-sref="app.register" > Sign Up</a></span></div>
+        
+        </form>
+        </div>
+      </div>
+  </ion-content>
+</ion-view>

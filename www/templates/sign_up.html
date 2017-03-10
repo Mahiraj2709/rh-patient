@@ -1,0 +1,45 @@
+<ion-view title="ReviveHydration">
+    <ion-content>
+
+
+        <div class="main">
+            <div class="formarea">
+                <div class="text-center profile"><span class="profile-pic"><img src="img/profile-pic-2.png"
+                                                                                ng-src="{{profilePic}}" alt=""
+                                                                                height="85" width="78"
+                                                                                ng-click="imageChooser()"></span></div>
+                <div class="input-field">
+                    <input  name="user" placeholder="Name" type="text" ng-model="userRegiter.fullname">
+                    <span class="txtbox_icons"><i class="fa fa-user" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-field">
+                    <input name="user" placeholder="Email ID" type="email" ng-model="userRegiter.email">
+                    <span class="txtbox_icons"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-field">
+                    <input name="user" placeholder="Phone No" type="number" ng-model="userRegiter.mobile">
+                    <span class="txtbox_icons"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-field" ng-hide="true">
+                    <input name="user" placeholder="Address" type="text" ng-model="userRegiter.landmark">
+                    <span class="txtbox_icons"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-field">
+                    <input name="user" placeholder="Password" type="password" ng-model="userRegiter.password">
+                    <span class="txtbox_icons"> <i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                </div>
+                <div class="input-field">
+                    <input name="user" placeholder="Confirm Password" type="password"
+                           ng-model="userRegiter.confirm_password">
+                    <span class="txtbox_icons"> <i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                </div>
+                <div class="term-condition"><input type="checkbox" ng-model="userRegiter.acceptTns"> By creating an account you agree to our <a
+                        ng-click="termCondition()">Terms and Conditions</a> and <a ng-click="termCondition()">Privacy
+                    Policy</a></div>
+                <div class="btn_holder" ng-click="registerUser()"><input type="submit" name="Register" id=""
+                                                                         class="btns" value="Register"></div>
+                <div class="forgot_pass txt-center "> Already have an account? <a ui-sref="app.login"> Login</a></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

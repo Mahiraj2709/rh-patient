@@ -1,0 +1,11 @@
+<ion-modal-view>
+    <ion-content class="comments" ng-controller="TermsConditionCtrl" ng-init="loadTermsCondition()">
+        <div class="terms_sec">
+            <span class="cross_popup" ng-click="closePopUp()">  <i
+                    class="fa fa-times-circle" aria-hidden="true"></i>   </span>
+                <h2> Terms & Conditions </h2>
+                <p ng-bind-html="pageContent"></p>
+            </div>
+
+    </ion-content>
+</ion-modal-view>
