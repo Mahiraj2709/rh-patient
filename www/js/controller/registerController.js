@@ -51,7 +51,9 @@ ionicModule.controller('RegisterCtrl', function ($scope, $ionicHistory, services
 
     $scope.registerUser = function () {
         if (validUser()) {
+            //if profile pic is not there
             services.register($scope.profilePic,$scope.userRegiter, function (response) {
+                console.log("responce status : " +JSON.stringify(response));
                 if(response.data.status == SUCCESS_STATUS) {
                     //$rootScope.login = 'Log Out'
                     window.localStorage.setItem("profile", JSON.stringify(response.data.user.ops[0]));
@@ -133,6 +135,6 @@ ionicModule.controller('RegisterCtrl', function ($scope, $ionicHistory, services
     }
 
     $scope.closeTermCondition = function () {
-        $scope.modal.close()
+        $scope.modal.remove()
     }
 })

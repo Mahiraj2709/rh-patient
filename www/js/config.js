@@ -21,7 +21,7 @@ if (instance == 'local') {
         var googleKey = 'AIzaSyAz8_ue5-28qHDdG4DPUTIgZtLtlpikEM8';
     }
 }
-var imageURL = "http://www.studioesoterika.net/informazioni/img2/"
+var imageURL = "http://revivehydration.onsisdev.info:5086/uploads/profile/"
 var imgExtension = ".jpg"
 var SUCCESS_STATUS = "1"
 ionicModule.factory('socketFactory', function () {

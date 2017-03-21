@@ -20,8 +20,15 @@ ionicModule.controller('LoginCtrl', function ($scope, $ionicHistory, services,$s
     $scope.login = function () {
         if (validUser()) {
             services.login($scope.user, function (response) {
+                //console.log("responce status : " +JSON.stringify(response));
+
+                //var response = JSON.parse(response);
+
                 if(response.data.status == SUCCESS_STATUS) {
                     //$rootScope.login = 'Log Out'
+                    //clear data from current user
+                    $scope.user = undefined
+                    //set root scope
                     window.localStorage.setItem("profile", JSON.stringify(response.data.user));
                     //popups.showMessage(response.response_data.msg)
                     window.localStorage.setItem("login", true);

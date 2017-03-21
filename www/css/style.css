@@ -89,3 +89,4 @@ input.pad-left10{ padding-left: 10px; }
 .popup-title {color: black;}
 .popup-buttons .button {background-color: #428794;font-size: 20px;}
 .popup-buttons .button.activated {background-color: #3a6976;}
+.term-condition  a{ text-align: left; color: #FFF; text-decoration: underline;font-size: 12px;}

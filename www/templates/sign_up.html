@@ -17,7 +17,7 @@
                     <span class="txtbox_icons"><i class="fa fa-envelope" aria-hidden="true"></i></span>
                 </div>
                 <div class="input-field">
-                    <input name="user" placeholder="Phone No" type="number" ng-model="userRegiter.mobile">
+                    <input name="user" placeholder="Phone No" type="tel" ng-model="userRegiter.mobile">
                     <span class="txtbox_icons"><i class="fa fa-phone" aria-hidden="true"></i></span>
                 </div>
                 <div class="input-field" ng-hide="true">
@@ -33,7 +33,7 @@
                            ng-model="userRegiter.confirm_password">
                     <span class="txtbox_icons"> <i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                 </div>
-                <div class="term-condition"><input type="checkbox" ng-model="userRegiter.acceptTns"> By creating an account you agree to our <a
+                <div class="term-condition"><input type="checkbox" ng-model="userRegiter.acceptTns"> By checking this box you agree to our <a
                         ng-click="termCondition()">Terms and Conditions</a> and <a ng-click="termCondition()">Privacy
                     Policy</a></div>
                 <div class="btn_holder" ng-click="registerUser()"><input type="submit" name="Register" id=""
