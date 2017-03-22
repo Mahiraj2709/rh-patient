@@ -50,10 +50,31 @@ ionicModule.factory('popups',function ($ionicPopup,$ionicHistory,$location ) {
             }
         });
     }
+
+    isOnline = function () {
+        if (window.Connection) {
+            if (navigator.connection.type == Connection.NONE) {
+                $ionicPopup.alert({
+                    title: "Internet Disconnected",
+                    content: "The internet is disconnected on your device."
+                })
+                    .then(function (result) {
+                        /*if(!result) {
+                         ionic.Platform.exitApp();
+                         }*/
+                    });
+                return false
+            } else {
+                return true
+            }
+        }
+    }
+
    return {
        showAlert:showAlert,
        showMessage:showMessage,
        logout:logout,
-       login:login
+       login:login,
+       isOnline:isOnline
    }
 })

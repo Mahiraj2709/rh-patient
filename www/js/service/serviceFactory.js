@@ -1,10 +1,11 @@
 /**
  * Created by admin on 2/6/2017.
  */
-ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializerJQLike) {
+ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializerJQLike,popups) {
     function login(user, callback) {
+        if(!popups.isOnline()) return
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
 
         $http({
@@ -25,8 +26,9 @@ ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializ
 
     // to get all services for unit
     function register(picURI,user, callback) {
+        if(!popups.isOnline()) return
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
         var win = function (r) {
             $ionicLoading.hide()
@@ -78,8 +80,9 @@ ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializ
 
     // to get all services for unit
     function forgotPassword(user, callback) {
+        if(!popups.isOnline()) return
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
         $http({
             url: baseURL + 'forgetpassword',
@@ -98,8 +101,9 @@ ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializ
 
     // to get all services for unit
     function logout(user, callback) {
+        if(!popups.isOnline()) return
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
         $http({
             url: baseURL + 'logout',
@@ -119,7 +123,7 @@ ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializ
     // to get all services for unit
     function getcustomerinfo(customerId, callback) {
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
         $http({
             url: baseURL + 'getcustomerinfo',
@@ -138,7 +142,7 @@ ionicModule.factory('services', function ($http,$ionicLoading,$httpParamSerializ
     // to get all services for unit
     function getstorico(customerId, callback) {
         $ionicLoading.show({
-            template: 'Loading...'
+            template: '<ion-spinner></ion-spinner> <br/> Loading content...'
         });
         $http({
             url: baseURL + 'storico',
