@@ -17,7 +17,7 @@ ionicModule.controller('ForgotPasswdCtrl', function ($scope, services, popups, $
             services.forgotPassword($scope.user, function (response) {
                 console.log("responce status : " +JSON.stringify(response));
 
-                var response = JSON.parse(response);
+                //var response = JSON.parse(response);
                 if (response.data.status == SUCCESS_STATUS) {
                     $location.url('/app/verify_email')
                 } else {
